@@ -40,9 +40,6 @@ public class MyTest {
 
     @Test
     public void test61(){
-        String s = "+1";
-        System.out.println(Math.pow(10,2));
-        //System.out.println(s>1);
     }
 
 

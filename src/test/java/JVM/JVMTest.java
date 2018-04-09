@@ -2,6 +2,9 @@ package JVM;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author: kangkang.lv
  * @date: 17-7-13 下午2:30
@@ -70,5 +73,23 @@ public class JVMTest {
         allocation3 = new byte[4 * _1MB];
         allocation3 = null;
         allocation3 = new byte[4 * _1MB];
+    }
+
+    static class OOMObject{
+        public byte[] placeholder = new byte[64*1024];
+    }
+
+    public static void fillHeap(int num) throws InterruptedException{
+        List<OOMObject> list = new ArrayList<OOMObject>();
+        for (int i=0;i<num;i++){
+            //稍作延时
+            Thread.sleep(50);
+            list.add(new OOMObject());
+        }
+        System.gc();
+    }
+
+    public static void main(String[] args) throws Exception{
+        fillHeap(1000);
     }
 }
