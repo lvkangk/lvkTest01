@@ -26,10 +26,12 @@ public class ThreadTest {
     @Test
     //ThreadLocal
     public void threadTest08() throws InterruptedException {
+        value.set(100);
         for (int i = 0; i < 5; i++) {
             new Thread(new MyThread(i)).start();
         }
-        Thread.currentThread().sleep(10000l);
+        Thread.currentThread().sleep(3000l);
+        System.out.println("主线程value:" + value.get());
     }
 
     static class MyThread implements Runnable {
