@@ -22,15 +22,56 @@ public class TreeTest {
         b4.left = b3;
         b4.right = b5;
         List<Integer> list =
+                test3(b2);
                 //preorderIteratively(b2);
                 //inorderIteratively(b2);
                 //postorderIteratively(b2);
-                levelorder(b2);
+                //levelorder(b2);
         for (int l : list){
             System.out.printf(l+" ");
         }
 
     }
+
+    //前序递归
+    public List<Integer> test1(BinaryNode node){
+        List<Integer> list = new ArrayList<>();
+        list.add(node.value);
+        if (node.left != null){
+            list.addAll(test1(node.left));
+        }
+        if (node.right != null){
+            list.addAll(test1(node.right));
+        }
+        return list;
+    }
+
+    //中序递归
+    public List<Integer> test2(BinaryNode node){
+        List<Integer> list = new ArrayList<>();
+        if (node.left != null){
+            list.addAll(test2(node.left));
+        }
+        list.add(node.value);
+        if (node.right != null){
+            list.addAll(test2(node.right));
+        }
+        return list;
+    }
+
+    //后序递归
+    public List<Integer> test3(BinaryNode node){
+        List<Integer> list = new ArrayList<>();
+        if (node.left != null){
+            list.addAll(test3(node.left));
+        }
+        if (node.right != null){
+            list.addAll(test3(node.right));
+        }
+        list.add(node.value);
+        return list;
+    }
+
 
     /**
      * 前序遍历非递归版
