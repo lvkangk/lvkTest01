@@ -24,7 +24,9 @@ import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by lvkang on 16-5-5.
@@ -35,11 +37,36 @@ public class MyTest {
 
 
     public static void main(String[] args) {
+    }
+
+
+    @Test
+    public void test62(){
+        //ConcurrentHashMap
+                //Hashtable
+        Map<String,String> map = new HashMap<>();
+        map.put("1","1");
+        changeMap(map);
+        System.out.printf(map.get("1"));
+    }
+    public void changeMap(Map<String,String> map){
+        Map<String,String> m = map;
+        m.put("1","2");
 
     }
 
+
     @Test
     public void test61(){
+        Queue<String> list = new LinkedList<>();
+        list.add("aa");
+        list.add("bb");
+        list.add("cc");
+        System.out.println(list.poll());
+        System.out.println(list.poll());
+        System.out.println(list.peek());
+        System.out.println(list.peek());
+
     }
 
 
