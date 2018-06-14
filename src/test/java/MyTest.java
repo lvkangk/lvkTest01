@@ -41,10 +41,15 @@ public class MyTest {
 
 
     @Test
+    public void test63(){
+
+    }
+
+    @Test
     public void test62(){
         //ConcurrentHashMap
                 //Hashtable
-        Map<String,String> map = new HashMap<>();
+        Map<String,String> map = new HashMap<String,String>();
         map.put("1","1");
         changeMap(map);
         System.out.printf(map.get("1"));
@@ -58,7 +63,7 @@ public class MyTest {
 
     @Test
     public void test61(){
-        Queue<String> list = new LinkedList<>();
+        Queue<String> list = new LinkedList<String>();
         list.add("aa");
         list.add("bb");
         list.add("cc");

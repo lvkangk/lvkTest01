@@ -35,7 +35,7 @@ public class TreeTest {
 
     //前序递归
     public List<Integer> test1(BinaryNode node){
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         list.add(node.value);
         if (node.left != null){
             list.addAll(test1(node.left));
@@ -48,7 +48,7 @@ public class TreeTest {
 
     //中序递归
     public List<Integer> test2(BinaryNode node){
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         if (node.left != null){
             list.addAll(test2(node.left));
         }
@@ -61,7 +61,7 @@ public class TreeTest {
 
     //后序递归
     public List<Integer> test3(BinaryNode node){
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         if (node.left != null){
             list.addAll(test3(node.left));
         }
@@ -78,8 +78,8 @@ public class TreeTest {
      * @param node
      */
     public List<Integer> preorderIteratively(BinaryNode node){
-        Stack<BinaryNode> stack = new Stack<>();
-        List<Integer> list = new ArrayList<>();
+        Stack<BinaryNode> stack = new Stack<BinaryNode>();
+        List<Integer> list = new ArrayList<Integer>();
         BinaryNode cur = node;
         while (cur!=null || stack.size()>0){
             if (cur != null){
@@ -99,8 +99,8 @@ public class TreeTest {
      * @return
      */
     public List<Integer> inorderIteratively(BinaryNode node){
-        Stack<BinaryNode> stack = new Stack<>();
-        List<Integer> list = new ArrayList<>();
+        Stack<BinaryNode> stack = new Stack<BinaryNode>();
+        List<Integer> list = new ArrayList<Integer>();
         BinaryNode cur = node;
         while (cur != null || !stack.isEmpty()){
             if (cur != null){
@@ -120,8 +120,8 @@ public class TreeTest {
      * @return
      */
     public List<Integer> postorderIteratively(BinaryNode node){
-        Stack<BinaryNode> stack = new Stack<>();
-        List<Integer> list = new ArrayList<>();
+        Stack<BinaryNode> stack = new Stack<BinaryNode>();
+        List<Integer> list = new ArrayList<Integer>();
         BinaryNode cur = node;
         BinaryNode p_right = null;
         while (cur != null || !stack.isEmpty()){
@@ -149,8 +149,8 @@ public class TreeTest {
      * @return
      */
     public static List<Integer> levelorder(BinaryNode node){
-        Queue<BinaryNode> queue = new LinkedList<>();   //用到队列
-        List<Integer> list = new ArrayList<>();
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();   //用到队列
+        List<Integer> list = new ArrayList<Integer>();
         BinaryNode temp;
         queue.add(node);
         while (queue.size()>0){

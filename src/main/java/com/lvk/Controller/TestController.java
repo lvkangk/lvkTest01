@@ -30,7 +30,7 @@ public class TestController {
     @RequestMapping("/t1")
     @ResponseBody
     public Map<Integer,String> t1(){
-        Map<Integer,String> result = new LinkedHashMap<>();
+        Map<Integer,String> result = new LinkedHashMap<Integer,String>();
         result.put(1,"111");
         result.put(2,"222");
         result.put(3,"333");

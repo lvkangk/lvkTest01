@@ -395,7 +395,7 @@ public class LeetCode {
     }
 
     public int lengthOfLongestSubstring(String s) {
-        Map<Character,Integer> child = new HashMap<>();
+        Map<Character,Integer> child = new HashMap<Character,Integer>();
         int len = 0;
         int childLen = 0;
         for (int i = 0;i<s.length();i++){

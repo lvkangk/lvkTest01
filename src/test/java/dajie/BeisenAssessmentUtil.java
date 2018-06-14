@@ -1,3 +1,4 @@
+/*
 package dajie;
 
 import com.beisen.sdk.BeisenException;
@@ -10,10 +11,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * @author: kangkang.lv
  * @date: 17-8-11 上午11:25
- */
+ *//*
+
 public class BeisenAssessmentUtil {
 
 
@@ -76,3 +79,4 @@ public class BeisenAssessmentUtil {
 
 
 }
+*/
